@@ -1,0 +1,308 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "d8edc291-d169-423c-b679-2c351392a3c1": {
+        "id": "d8edc291-d169-423c-b679-2c351392a3c1",
+        "parent": null,
+        "name": "hiru0108_issue667",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "c82db051-e240-406f-8613-fe93aa91a8b8",
+          "3cecb46a-a3ee-4439-b0aa-bfc2e1ca3c03",
+          "03a513d3-3c83-4f8a-b4e4-51ef625219df",
+          "97ee9bc3-0249-4d8b-b327-27b0462722aa",
+          "d795a6b3-11b3-4c8d-b087-81911a6ee5bf",
+          "1c00e91d-44d9-4615-b5b5-0bea315d2b3f"
+        ],
+        "isRemovable": false,
+        "filePath": "hiru0108_issue667"
+      },
+      "c82db051-e240-406f-8613-fe93aa91a8b8": {
+        "id": "c82db051-e240-406f-8613-fe93aa91a8b8",
+        "parent": "d8edc291-d169-423c-b679-2c351392a3c1",
+        "name": "lambda.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "hiru0108_issue667/lambda.js",
+        "code": "let SL_AWS = require('slappforge-sdk-aws');\nlet connectionManager = require('./ConnectionManager');\nconst rds = new SL_AWS.RDS(connectionManager);\n\nexports.handler = function (event, context, callback) {\n\n    // You can pass the existing connection to this function.\n    // A new connection will be created if it's not present as the third param \n    // You must always end/destroy the DB connection after it's used\n\n    // You can pass the existing connection to this function.\n    // A new connection will be created if it's not present as the third param \n    // You must always end/destroy the DB connection after it's used\n \n    callback(null, { \"message\": \"Successfully executed\" });\n}",
+        "config": {
+          "runtime": "nodejs8.10",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": []
+      },
+      "3cecb46a-a3ee-4439-b0aa-bfc2e1ca3c03": {
+        "id": "3cecb46a-a3ee-4439-b0aa-bfc2e1ca3c03",
+        "parent": "d8edc291-d169-423c-b679-2c351392a3c1",
+        "name": "python27.py",
+        "type": "PYTHON_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "hiru0108_issue667/python27.py",
+        "code": "from sample.add import add\ndef handler(event, context):\n    \n    return {\"message\": add(1,2)}\n",
+        "config": {
+          "runtime": "python2.7",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": [],
+        "testCases": {
+          "6ea093e1-85c4-457b-b6e6-8abf3089872e": {
+            "id": "6ea093e1-85c4-457b-b6e6-8abf3089872e",
+            "name": "Test event",
+            "functionId": "3cecb46a-a3ee-4439-b0aa-bfc2e1ca3c03",
+            "event": "{\r\n    \"key1\": \"value1\",\r\n    \"key2\": \"value2\",\r\n    \"key3\": \"value3\"\r\n}",
+            "eventTemplate": "hello-world"
+          }
+        }
+      },
+      "03a513d3-3c83-4f8a-b4e4-51ef625219df": {
+        "id": "03a513d3-3c83-4f8a-b4e4-51ef625219df",
+        "parent": "d8edc291-d169-423c-b679-2c351392a3c1",
+        "name": "__init__.py",
+        "type": "PYTHON_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "hiru0108_issue667/__init__.py",
+        "code": ""
+      },
+      "97ee9bc3-0249-4d8b-b327-27b0462722aa": {
+        "id": "97ee9bc3-0249-4d8b-b327-27b0462722aa",
+        "parent": "d8edc291-d169-423c-b679-2c351392a3c1",
+        "name": "python36.py",
+        "type": "PYTHON_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "hiru0108_issue667/python36.py",
+        "code": "from sample.add import add\ndef handler(event, context):\n    \n    return {\"message\": add(1,2)}\n",
+        "config": {
+          "runtime": "python2.7",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": [],
+        "testCases": {
+          "7a25a17c-9542-48d3-aa88-46f8aca8116c": {
+            "id": "7a25a17c-9542-48d3-aa88-46f8aca8116c",
+            "name": "Test event",
+            "functionId": "97ee9bc3-0249-4d8b-b327-27b0462722aa",
+            "event": "{\r\n    \"key1\": \"value1\",\r\n    \"key2\": \"value2\",\r\n    \"key3\": \"value3\"\r\n}",
+            "eventTemplate": "hello-world"
+          }
+        }
+      },
+      "d795a6b3-11b3-4c8d-b087-81911a6ee5bf": {
+        "id": "d795a6b3-11b3-4c8d-b087-81911a6ee5bf",
+        "parent": "d8edc291-d169-423c-b679-2c351392a3c1",
+        "name": "sample",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "f12b0c77-e3bc-40c1-bf14-38777ad69172",
+          "ac8b0dc4-6bf6-4b58-9a4a-a184c5d57a30"
+        ],
+        "isRemovable": true,
+        "filePath": "hiru0108_issue667/sample"
+      },
+      "f12b0c77-e3bc-40c1-bf14-38777ad69172": {
+        "id": "f12b0c77-e3bc-40c1-bf14-38777ad69172",
+        "parent": "d795a6b3-11b3-4c8d-b087-81911a6ee5bf",
+        "name": "add.py",
+        "type": "PYTHON_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "hiru0108_issue667/sample/add.py",
+        "code": "def add(x, y):\r\n   return x + y"
+      },
+      "ac8b0dc4-6bf6-4b58-9a4a-a184c5d57a30": {
+        "id": "ac8b0dc4-6bf6-4b58-9a4a-a184c5d57a30",
+        "parent": "d795a6b3-11b3-4c8d-b087-81911a6ee5bf",
+        "name": "__init__.py",
+        "type": "PYTHON_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "hiru0108_issue667/sample/__init__.py",
+        "code": ""
+      },
+      "1c00e91d-44d9-4615-b5b5-0bea315d2b3f": {
+        "id": "1c00e91d-44d9-4615-b5b5-0bea315d2b3f",
+        "parent": "d8edc291-d169-423c-b679-2c351392a3c1",
+        "name": "ConnectionManager.js",
+        "type": "JS_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "hiru0108_issue667/ConnectionManager.js",
+        "code": "module.exports = function() {\n    this.dbConnections = [];\n\n    this.dbConnections[\"hirutest\"] = {\n        host: process.env.EndPoint_rdsHirutest,\n        port: process.env.Port_rdsHirutest,\n        user: process.env.User_rdsHirutest,\n        password: process.env.Password_rdsHirutest,\n        database: \"test\"\n    };\n    this.dbConnections[\"hirudinee\"] = {\n        host: process.env.EndPoint_rdsHirudinee,\n        port: process.env.Port_rdsHirudinee,\n        user: process.env.User_rdsHirudinee,\n        password: process.env.Password_rdsHirudinee,\n        database: \"hirudinee\"\n    };\n};"
+      }
+    },
+    "deletedFiles": [],
+    "rootNode": "d8edc291-d169-423c-b679-2c351392a3c1",
+    "openFiles": [
+      "c82db051-e240-406f-8613-fe93aa91a8b8",
+      "3cecb46a-a3ee-4439-b0aa-bfc2e1ca3c03",
+      "97ee9bc3-0249-4d8b-b327-27b0462722aa",
+      "f12b0c77-e3bc-40c1-bf14-38777ad69172"
+    ],
+    "currentFileId": "c82db051-e240-406f-8613-fe93aa91a8b8",
+    "resources": {
+      "rds-hirutest": {
+        "name": "rds-hirutest",
+        "type": "RDS",
+        "config": {
+          "editMode": false,
+          "operation": 0,
+          "rdsInstance": {
+            "rdsEngineType": "mysql",
+            "rdsEdition": "",
+            "rdsInstanceSpec": {
+              "dbInstanceClass": "db.m4.8xlarge",
+              "dbLicenseModel": "general-public-license",
+              "dbEngineVersion": "5.7.19"
+            },
+            "rdsSetting": {
+              "instanceIdentifier": "hirutest",
+              "masterUsername": "hiti",
+              "masterPassword": "12345678"
+            },
+            "rdsDBOptions": {
+              "dbName": "test",
+              "dbPort": "8809"
+            },
+            "rdsInstanceArn": "",
+            "Host": "",
+            "doesExist": false,
+            "initializationQuery": "sample",
+            "alreadyDeployed": false
+          },
+          "rdsInstanceResources": [],
+          "projectRegion": "us-east-1",
+          "mode": 0,
+          "additionalFiles": [],
+          "params": {
+            "query": "INSERT into test (name, id , pass)",
+            "inserts": "1, 'hiru', 'test'"
+          },
+          "isGlobalEditMode": false,
+          "enableInject": true,
+          "isNewFromGlobal": false
+        }
+      },
+      "rds-hirudinee": {
+        "name": "rds-hirudinee",
+        "type": "RDS",
+        "config": {
+          "editMode": false,
+          "operation": 0,
+          "rdsInstance": {
+            "rdsEngineType": "mysql",
+            "rdsEdition": "",
+            "rdsInstanceSpec": {
+              "dbInstanceClass": "db.m3.xlarge",
+              "dbLicenseModel": "general-public-license",
+              "dbEngineVersion": "5.7.19"
+            },
+            "rdsSetting": {
+              "instanceIdentifier": "hirudinee",
+              "masterUsername": "hirudinee",
+              "masterPassword": "12345678"
+            },
+            "rdsDBOptions": {
+              "dbName": "hirudinee",
+              "dbPort": "3306"
+            },
+            "rdsInstanceArn": "",
+            "Host": "",
+            "doesExist": false,
+            "initializationQuery": "",
+            "alreadyDeployed": false
+          },
+          "rdsInstanceResources": [],
+          "projectRegion": "us-east-1",
+          "mode": 0,
+          "additionalFiles": [],
+          "params": {
+            "query": "insert into test (id)",
+            "inserts": "1"
+          },
+          "isGlobalEditMode": false,
+          "enableInject": true,
+          "isNewFromGlobal": false
+        }
+      }
+    },
+    "customTemplate": {
+      "dialect": null,
+      "definitions": {}
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      },
+      {
+        "lambdaId": "3cecb46a-a3ee-4439-b0aa-bfc2e1ca3c03",
+        "varKey": "PYTHONPATH",
+        "varValue": "/var/runtime:/var/task/hiru0108_issue667",
+        "shouldPersist": true,
+        "displayOnly": false,
+        "editable": true
+      },
+      {
+        "lambdaId": "97ee9bc3-0249-4d8b-b327-27b0462722aa",
+        "varKey": "PYTHONPATH",
+        "varValue": "/var/runtime:/var/task/hiru0108_issue667",
+        "shouldPersist": true,
+        "displayOnly": false,
+        "editable": true
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {
+        "slappforge-sdk-aws": {
+          "name": "slappforge-sdk-aws",
+          "language": "javascript",
+          "version": "0.0.5",
+          "dev": false,
+          "notRemovable": false
+        }
+      }
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "hiru0108_issue667",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "platformRegions": {},
+    "lastSave": 1564643664119
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "hiru0108_issue667",
+      "url": "https://github.com/HirudineeADRT/hiru0108_issue6671",
+      "branches": []
+    }
+  }
+}

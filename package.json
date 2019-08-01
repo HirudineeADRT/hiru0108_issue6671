@@ -1,0 +1,8 @@
+{
+  "name": "hiru0108_issue667",
+  "version": "1.0.0",
+  "dependencies": {
+    "slappforge-sdk-aws": "0.0.5"
+  },
+  "devDependencies": {}
+}
